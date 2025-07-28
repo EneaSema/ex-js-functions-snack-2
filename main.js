@@ -46,3 +46,58 @@ function square(num1) {
 }
 
 console.log("il quadrato del numero selezionato è:" + square(num1));
+
+/* 🏆 Snack 3
+Crea una funzione eseguiOperazione
+Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback).
+La funzione deve eseguire l'operazione fornita sui due numeri.
+*/
+const moltiplicazione = (num1, num2) => num2 * num1;
+const sottrazione = (num1, num2) => num2 - num1;
+
+const eseguiOperazione = (num1, num2, operazione) => operazione(num1, num2);
+
+console.log(
+  "la moltiplicazione è: " + eseguiOperazione(5, 10, moltiplicazione)
+);
+console.log("la sottrazione è: " + eseguiOperazione(5, 10, sottrazione));
+
+/* 🏆 Snack 4
+Crea un generatore di funzioni creaTimer
+Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+*/
+
+// const time = 5000;
+
+function creaTimer(time) {
+  return setTimeout(console.log("tempo scaduto!"), time);
+}
+
+console.log(creaTimer(5000));
+
+/* 🏆 Snack 5
+Crea una funzione stampaOgniSecondo con setInterval.
+Definisci una funzione che accetta un messaggio e lo stampa ogni secondo.
+
+Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.
+*/
+
+const stampaOgniSecondo = setInterval(
+  () => console.log("Messaggio in loop"),
+  1000
+);
+
+clearInterval(stampaOgniSecondo);
+
+/* 🏆 Snack 6
+Crea un contatore automatico con setInterval.
+Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
+*/
+
+const creaContatoreAutomatico = () => {
+  let contatore = 0;
+};
+
+function setInterval() {
+  () => {}, 5000;
+}
