@@ -5,26 +5,26 @@ Definisci una funzione creaContatoreAutomatico che accetta un intervallo di temp
 
 console.log("Esercizio 6");
 
-const time = 1000;
+// let timeStart = 1000;
 
-function creaContatoreAutomatico(time) {
-  let contatore = 0;
+// function creaContatoreAutomatico(timeStart) {
+//   let contatore = 0;
+//   console.log("inizio contatore:" + contatore);
 
-  const startContatore = setInterval(() => {
-    console.log("inizio contatore:" + contatore);
-    contatore++;
-    console.log("aumento contatore:" + contatore);
-  }, time);
+//   const startContatore = setInterval(() => {
+//     contatore++;
+//     console.log("aumento contatore:" + contatore);
+//   }, time);
 
-  return startContatore;
-}
+//   return startContatore;
+// }
 
-// console.log(startContatore);
+// // console.log(startContatore);
 
-const first = creaContatoreAutomatico(time);
+// const first = creaContatoreAutomatico(timeStart);
 
-console.log(first);
+// console.log(startContatore(first));
 
-setTimeout(() => {
-  clearInterval(first);
-}, 5000);
+// setTimeout(() => {
+//   clearInterval(first);
+// }, 2000);

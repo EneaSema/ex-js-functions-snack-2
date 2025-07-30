@@ -5,8 +5,10 @@ Definisci una funzione chiamata quadrato che accetta un numero e restituisce il 
 
 console.log("Esercizio 2");
 
-function square(num1) {
-  return num1 * num1;
+const num = 3;
+
+function square(num) {
+  return num * num;
 }
 
-console.log("il quadrato del numero selezionato è:" + square(num1));
+console.log("il quadrato del numero selezionato è:" + square(num));

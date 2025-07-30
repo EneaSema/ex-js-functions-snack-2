@@ -7,9 +7,15 @@ Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa c
 
 console.log("Esercizio 5");
 
-const stampaOgniSecondo = setInterval(
-  () => console.log("Messaggio in loop"),
-  1000
-);
+const messagge = "loop";
 
-clearInterval(stampaOgniSecondo);
+function stampaOgniSecondo(messagge) {
+  return setInterval(() => console.log(messagge), 1000);
+}
+
+const stampa = stampaOgniSecondo(messagge);
+
+setTimeout(function () {
+  clearInterval(stampa);
+  console.log("loop finito");
+}, 5000);
