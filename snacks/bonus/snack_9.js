@@ -7,29 +7,36 @@ Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo 
 
 console.log("Esercizio 9");
 
-const a = 10;
-const b = 2;
+const a = 6;
+const b = 9;
 
-function sum(a, b) {
+function somma(a, b) {
   return a + b;
 }
 function minus(a, b) {
   return b - a;
 }
-function multiplier(a, b) {
+function moltiplication(a, b) {
   return a * b;
 }
-function division(a, b) {
-  return a / b;
-}
-// const sequenzaOperazioni = setInterval(
-//   [
-//     () => console.log("operazione 1: Somma" + sum(a, b)),
-//     () => console.log("operazione 2: Sottrazione" + minus(a, b)),
-//     () => console.log("operazione 3: Moltiplicazione" + multiplier(a, b)),
-//     () => console.log("operazione 4: Divisione" + division(a, b)),
-//   ],
-//   2000
-// );
+const intervallo = 1000;
 
-// console.log(sequenzaOperazioni);
+const stopTime = 3000;
+
+function sequenzaOperazioni([somma, minus, moltiplication], intervallo) {
+  return setInterval(function () {
+    console.log(somma);
+    console.log(minus);
+    console.log(moltiplication);
+  }, intervallo);
+}
+
+const sequenza = sequenzaOperazioni(
+  [somma(a, b), minus(a, b), moltiplication(a, b)],
+  intervallo
+);
+
+setTimeout(function () {
+  clearInterval(sequenza);
+  console.log("fine");
+}, stopTime);

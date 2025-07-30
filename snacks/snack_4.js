@@ -5,14 +5,14 @@ Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuo
 
 console.log("Esercizio 4");
 
-const time = 1000;
+// let time = 7000;
 
-console.log("Tempo:" + time);
+// function creaTimer(time) {
+//   console.log("timer pronto!");
 
-function creaTimer(time) {
-  console.log("timer pronto!");
+//   return setTimeout(function () {
+//     console.log("tempo scaduto");
+//   }, time);
+// }
 
-  return setTimeout(console.log("tempo scaudto"), 200000);
-}
-
-creaTimer(time);
+// creaTimer(time);

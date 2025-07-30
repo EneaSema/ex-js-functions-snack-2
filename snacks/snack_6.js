@@ -14,17 +14,14 @@ console.log("Esercizio 6");
 //   const startContatore = setInterval(() => {
 //     contatore++;
 //     console.log("aumento contatore:" + contatore);
-//   }, time);
+//   }, timeStart);
 
 //   return startContatore;
 // }
 
-// // console.log(startContatore);
-
 // const first = creaContatoreAutomatico(timeStart);
 
-// console.log(startContatore(first));
-
-// setTimeout(() => {
+// setTimeout(function () {
 //   clearInterval(first);
-// }, 2000);
+//   console.log("fine contatore");
+// }, 10000);
