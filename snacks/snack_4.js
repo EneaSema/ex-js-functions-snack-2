@@ -5,14 +5,18 @@ Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuo
 
 console.log("Esercizio 4");
 
-// let time = 7000;
+let time = 7000;
 
-// function creaTimer(time) {
-//   console.log("timer pronto!");
+function creaTimer(time) {
+  console.log("timer pronto!");
 
-//   return setTimeout(function () {
-//     console.log("tempo scaduto");
-//   }, time);
-// }
+  //   return setTimeout(function () { corrego, scrivendo arrow function dentro setTimeout e non la funzione anonima
+  //     console.log("tempo scaduto");
+  //   }, time);
 
-// creaTimer(time);
+  return setTimeout(() => {
+    console.log("tempo scaduto");
+  }, time);
+}
+
+creaTimer(time);

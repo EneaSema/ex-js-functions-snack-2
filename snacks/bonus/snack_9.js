@@ -11,33 +11,49 @@ console.log("Esercizio 9");
 const a = 6;
 const b = 9;
 
-// function somma(a, b) {
-//   return a + b;
-// }
-// function minus(a, b) {
-//   return b - a;
-// }
-// function moltiplication(a, b) {
-//   return a * b;
-// }
-// const intervallo = 1000;
+function somma(a, b) {
+  return a + b;
+}
+function minus(a, b) {
+  return b - a;
+}
+function moltiplication(a, b) {
+  return a * b;
+}
+const intervallo = 1000;
 
-// const stopTime = 3000;
+const stopTime = 3000;
 
-// function sequenzaOperazioni([somma, minus, moltiplication], intervallo) {
-//   return setInterval(function () {
-//     console.log(somma);
-//     console.log(minus);
-//     console.log(moltiplication);
-//   }, intervallo);
-// }
+function sequenzaOperazioni([somma, minus, moltiplication], intervallo) {
+  return setInterval(function () {
+    console.log(somma);
+    console.log(minus);
+    console.log(moltiplication);
+  }, intervallo);
+}
 
-// const sequenza = sequenzaOperazioni(
-//   [somma(a, b), minus(a, b), moltiplication(a, b)],
-//   intervallo
-// );
+const sequenza = sequenzaOperazioni(
+  [somma(a, b), minus(a, b), moltiplication(a, b)],
+  intervallo
+);
 
-// setTimeout(function () {
-//   clearInterval(sequenza);
-//   console.log("fine");
-// }, stopTime);
+setTimeout(function () {
+  clearInterval(sequenza);
+  console.log("fine");
+}, stopTime);
+
+/* MIA SOLUZIONE SBAGLIATA, NON COMPRESO LA TRACCIA 
+
+SOLUZIONE ERA CON UN forEach VEDI SOTTO
+
+function sequenzaOperazioni(operazioni, intervallo) {
+
+operazioni.forEach(( operazione, index) => {
+
+    setTime(() => {
+        operazione();        
+        }, intervallo*index);     
+     })
+}
+
+*/

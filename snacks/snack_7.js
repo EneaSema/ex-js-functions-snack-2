@@ -5,22 +5,24 @@ Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e u
 
 console.log("Esercizio 7");
 
-// const start = 1000;
-// const finish = 3000;
-// const messagge = "Hello";
-// console.log(messagge);
+const start = 1000;
+const finish = 3000;
+const newMessagge = "Hello";
+console.log(messagge);
 
-// function eseguiFerma(messagge, start, finish) {
-//   let contatatore = 1;
+function eseguiFerma(newMessagge, start, finish) {
+  let contatatore = 1;
 
-//   const esegui = setInterval(function () {
-//     console.log(messagge);
-//     contatatore++;
-//     if (contatatore * start > finish) {
-//       clearInterval(esegui);
-//       console.log("timer fermo");
-//     }
-//   }, 1000);
-// }
+  const esegui = setInterval(function () {
+    console.log(newMessagge);
+    contatatore++;
+    if (contatatore * start > finish) {
+      clearInterval(esegui);
+      console.log("timer fermo");
+    }
+  }, start);
+}
 
-// eseguiFerma(messagge, start, finish);
+eseguiFerma(newMessagge, start, finish);
+
+/* PRESO SPUNTO  CERCANDO SU GOOGLE E CON GEMINI */

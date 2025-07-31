@@ -13,3 +13,25 @@ function stampDone() {
 }
 
 const limite = 3000;
+
+/* non avevo idea, ho visto soluzione a seguito di ricerche e ragionamenti */
+
+function creaThrottler(stampDone, limite) {
+  let ultimaEsecuzione = 0;
+
+  return function () {
+    const ora = Date.now();
+    if (ora - ultimaEsecuzione >= limite) {
+      ultimaEsecuzione = ora;
+      stampDone();
+    } else {
+      console.log("non posso eseguire ancora");
+    }
+  };
+}
+
+const throttledLog = creaThrottler(stampDone, limite);
+
+throttledLog();
+throttledLog();
+setTimeout(throttledLog, 10000);

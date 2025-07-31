@@ -7,20 +7,20 @@ Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer.
 
 console.log("Esercizio 8");
 
-// const n = 10;
+const n = 10;
 
-// function contoAllaRovescia(n) {
-//   let contDown = n;
-//   console.log(contDown);
-//   let starContdown = setInterval(function () {
-//     contDown--;
-//     if (contDown === 0) {
-//       setTimeout(clearInterval(starContdown), 0);
-//       console.log("tempo scaduto");
-//     } else {
-//       console.log(contDown);
-//     }
-//   }, 1000);
-// }
+function contoAllaRovescia(n) {
+  let contDown = n;
+  console.log(contDown);
+  let starContdown = setInterval(function () {
+    contDown--;
+    if (contDown === 0) {
+      setTimeout(clearInterval(starContdown), 0);
+      console.log("tempo scaduto");
+    } else {
+      console.log(contDown);
+    }
+  }, 1000);
+}
 
-// console.log(contoAllaRovescia(n));
+console.log(contoAllaRovescia(n));

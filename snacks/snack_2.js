@@ -7,8 +7,13 @@ console.log("Esercizio 2");
 
 const num = 3;
 
+/* mio errore di comprensione
 function square(num) {
   return num * num;
-}
+}*/
+
+/* SOLUZIONE CORRETTA */
+
+const square = (num) => num * num;
 
 console.log("il quadrato del numero selezionato è:" + square(num));
